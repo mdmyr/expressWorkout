@@ -1,11 +1,9 @@
-var express = require('express');
+var express = require('Express');
 var app = express();
 
+var things = require('./things.js');
 
+//
+app.use('/things', things);
 
-app.get('/',function(req,res){
-    res.send("Hello Superman");
-});
-
-
-app.listen(3000);
+app.listen(3001);
